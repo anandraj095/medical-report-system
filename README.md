@@ -59,6 +59,19 @@ Retrieve aggregated analytics including:
 1. login to your mysql with your password
 2. CREATE DATABASE medical_reports;
 
+# IF USING DOCKER
+    
+    0. Download and set up docker in you machine.
+
+    1. Set the medical-report-system/backend/.env file to:
+        DATABASE_URL=mysql+pymysql://user:YOURPASSWORD@host.docker.internal:3306/medical_reports
+    2. docker compose down 
+    3. docker compose up --build
+
+# IF NOT USING DOCKER
+
+    1. Set the medical-report-system/backend/.env file to:
+        DATABASE_URL=mysql+pymysql://user:YOURPASSWORD@localhost:3306/medical_reports
 
 # Backend Setup
 1. Download the .zip file for the project
