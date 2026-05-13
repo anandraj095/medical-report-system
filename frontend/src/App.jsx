@@ -186,7 +186,7 @@ function App() {
     <div className="app-shell">
       <header className="hero">
         <div>
-          <p className="eyebrow">React frontend for your FastAPI backend</p>
+          <p className="eyebrow">React frontend for FastAPI backend</p>
           <h1>Medical Report Review & Exception Handling System</h1>
           <p className="hero-copy">
             This UI covers CSV upload, report review, suspicious flag inspection, analytics, and upload investigation.
@@ -254,19 +254,7 @@ function App() {
                       <span key={column} className="chip neutral-chip">{column}</span>
                     ))}
                   </div>
-                  <label className="field-label">Example CSV you can paste into a file</label>
                   <pre className="code-block">{templateCsvExample || 'Template example unavailable.'}</pre>
-                </Card>
-
-                <Card title="Frontend coverage" subtitle="Everything available in your backend is exposed here">
-                  <ul className="feature-list">
-                    <li>Upload CSV files through the UI</li>
-                    <li>Review upload summaries, duplicates, and processing status</li>
-                    <li>Inspect rejected rows and exact validation reasons</li>
-                    <li>Search, sort, paginate, and filter processed reports</li>
-                    <li>Focus only on suspicious reports or a single flag code</li>
-                    <li>Review analytics without using Swagger UI</li>
-                  </ul>
                 </Card>
               </div>
             </>
