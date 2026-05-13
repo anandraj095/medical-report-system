@@ -1,15 +1,19 @@
 from fastapi import FastAPI
 
 from app.database import Base, engine
-from app.models import CBCReport  # noqa: F401
-from app.routers.csv_upload import router as csv_router
+from app.models import CBCReport, RawReportRow, RejectedReport, SuspiciousFlag, Upload  # noqa: F401
+from app.routers.analytics import router as analytics_router
+from app.routers.reports import router as reports_router
+from app.routers.uploads import router as uploads_router
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Medical Report System API")
-app.include_router(csv_router)
+app = FastAPI(title="Medical Report Review & Exception Handling API")
+app.include_router(uploads_router)
+app.include_router(reports_router)
+app.include_router(analytics_router)
 
 
 @app.get("/")
-def root():
-    return {"message": "Medical Report System API is running"}
+def health_check() -> dict[str, str]:
+    return {"message": "Medical Report Review backend is running."}
