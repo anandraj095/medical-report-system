@@ -9,6 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
 
 DATABASE_URL = os.getenv("DATABASE_URL")
+
+print(f"Connecting to: {DATABASE_URL}")
 if not DATABASE_URL:
     raise RuntimeError(
         "DATABASE_URL is not set. Add it to backend/.env before starting the API."
