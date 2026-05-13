@@ -68,7 +68,20 @@ Retrieve aggregated analytics including:
 Optional : set up your virtual environment to instal the dependencies safely.
 5. pip install -r requirements.txt
 6. Run the backend using : uvicorn app.main:app --reload
+    Our backend should run at:
+    http://127.0.0.1:8000
 
+    We can test:
+    http://127.0.0.1:8000/docs
+
+# Frontend Setup
+1. cd medical-report-system/frontend
+2. npm install
+3. npm run dev
+4. React frontend should run at:
+    Copyhttp://localhost:5173
+
+    
 # High Level Flow
 
     CSV Upload
