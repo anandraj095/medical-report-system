@@ -53,6 +53,13 @@ Retrieve aggregated analytics including:
 
 # Technologies and modules used
 
+Technology          Role in Medical App
+FastAPI             API routing and documentation
+Uvicorn             High-speed server execution
+SQLAlchemy          Database interaction and logic
+Pydantic            Strict data format enforcement
+Cryptography        Hashing to check dublicates and Patient data encryption and security in future
+PyMySQL             Connecting to medical databases
 
 
 # Database Setup
